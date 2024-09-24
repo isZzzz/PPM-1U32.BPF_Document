@@ -9,7 +9,7 @@ This report identifies a critical vulnerability in the PPM-1U32.BPF, which can l
 
 # 3. Steps to Reproduce the Vulnerability
 - **Environment Setup**: Ensure the PPM-1U32.BPF device is in its default configuration and connected to a BACnet MS/TP network.
-- **Packet Transmission**: Send the following malformed APDU (unknown APDU) to the device: `55ff060337006c34015b377267732d216c77372d7d682d6431386623742c7e3273792c747861775f615b707d78625e2861666e2d28342e64293d61682470663525405f7470246d676131703b6464776c6f7337326a362974716b725e6228352167742b2e24707121792e5d642b79706a30616f24a86a`.
+- **Packet Transmission**: Send the following malformed request to the device: `55ff060337006c34015b377267732d216c77372d7d682d6431386623742c7e3273792c747861775f615b707d78625e2861666e2d28342e64293d61682470663525405f7470246d676131703b6464776c6f7337326a362974716b725e6228352167742b2e24707121792e5d642b79706a30616f24a86a`.
 - **Observation of Results**: (The address 0x03 is the PPM-1U32.BPF, and the address 0x37 is my fuzzer.)
   ![Packet Transmission Results](https://github.com/isZzzz/PPM-1U32.BPF_Document/blob/main/PPM_DoS.png)
   1. Initially, a request is sent to the target device, which responds normally.
